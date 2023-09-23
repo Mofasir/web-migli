@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-image: linear-gradient(rgb(221, 255, 188), rgb(113, 177, 104));
+    font-size: 1rem;
+}
+
+header {
+    display: inline;
+}
+
+#navbar {
+    background-color: rgb(74, 116, 66);
+    color: rgb(254, 255, 222);
+    border-bottom: 1px solid rgba(119, 189, 105, 0.952);
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    font-size: 18px;
+    padding: 0 30px;
+    position: sticky;
+    top: 0px;
+    transition: top 0.3s ease;
+}
+
+#navbar.hidden{
+    top: -180px;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: rgb(254, 255, 222);
+}
+
+h1 {
+    float: left;
+    height: inherit;
+    line-height: inherit;
+    padding: 0 30px;
+    font-size: 33px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+#navbar ul {
+    float: right;
+    list-style: none;
+    height: inherit;
+    line-height: inherit;
+    padding: 0 50px;
+}
+
+#navbar ul li {
+    display: inline-block;
+}
+
+#navbar ul li a {
+    display: block;
+    text-align: center;
+    padding: 0 30px;
+}
+
+#navbar ul li a:hover {
+    background-color: rgba(119, 189, 105, 0.952);
+}
+
+.menu-button {
+    display: none;
+    position: fixed;
+    top: 18px;
+    right: 10px; /* Menempatkan tombol menu di sebelah kanan */
+    font-size: 30px;
+    color: rgb(254, 255, 222);
+    cursor: pointer;
+    z-index: 1001;
+}
+
+h2,h3 {
+    color: rgb(51, 71, 47);
+    padding: 5px 0;
+}
+
+.biodata header{
+    text-align: center;
+}
+
+.box {
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+    padding-top: 20px;
+    margin-top: 15px;
+    background-color: rgb(254, 255, 222);
+    line-height: 25px;
+}  
+
+.acara-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.foto {
+    max-width: 100%;
+    height: auto;
+}
+
+#table-struktur {
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+    overflow: auto;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#content {
+    float: left;
+    width: 75%;
+}
+
+p {
+    text-align: justify;
+}
+
+section a {
+    font-weight: 400;
+    text-decoration: none;
+    color: rgb(51, 71, 47);
+}
+
+section a:hover {
+    font-weight: bold;
+}
+
+aside {
+    float: right;
+    width: 25%;
+    padding-left: 20px;
+}
+
+.left {
+    text-align: left;
+}
+
+footer {
+    padding: 20px;
+    color: rgb(254, 255, 222);
+    background-color: rgb(59, 92, 52);
+    text-align: center;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+footer a {
+    font-size: 15px;
+    font-weight: 400;
+    text-decoration: none;
+    color: rgb(254, 255, 222);
+}
+
+/* Stil untuk layar dengan lebar kurang dari 1280px */
+@media screen and (max-width: 1280px) {
+    body {
+        font-size: 16px;
+    }
+
+    #content,
+    aside {
+        width: 100%;
+        padding: 0;
+    }
+    #navbar {
+        padding: 0;
+    }
+
+    #navbar ul {
+        display: none;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        top: 80px;
+        right: 0; /* Menempatkan ul di sebelah kanan */
+        width: 100%;
+        flex-direction: column; /* Mengubah tampilan berjajar ke bawah */
+    }
+
+    #navbar ul.show {
+        display: flex; /* Menampilkan ul saat tombol menu diklik */
+    }
+
+    #navbar ul li {
+        text-align: center;
+        margin: 0;
+    }
+
+    #navbar ul li a {
+        display: block;
+        padding: 10px 0;
+        color: rgb(254, 255, 222);
+        background-color: rgba(119, 189, 105, 0.952);
+        text-decoration: none;
+    }
+
+    #navbar ul li a:hover {
+        background-color: rgba(93, 150, 82, 0.952);
+    }
+
+    .menu-button {
+        display: block;
+    }
+}
+
